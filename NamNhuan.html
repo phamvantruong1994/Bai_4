@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('   Nhap nam : '));
+    if (n % 4 == 0) {
+        if (n % 100 == 0) {
+            if (n % 400 == 0) {
+                alert(n + 'la nam nhuan');
+            }else {
+                alert(n + ' khong phai nam nhuan');
+            }
+
+        }
+        else {
+            alert(n + 'la nam nhuan');
+        }
+    }else {
+        alert(n + ' khong phai nam nhuan');
+    }
+</script>
+</body>
+</html>
