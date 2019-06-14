@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Nhap Thang</legend>
+        <br>
+        <input type="text" id="month">
+        <br><br>
+        <input type="button" onclick="TinhSoNgay()" value="CLICK ME">
+    </fieldset>
+    <div id="day"></div>
+</form>
+<script>
+    function TinhSoNgay() {
+        let day;
+        let month = parseInt(document.getElementById('month').value);
+        if (month < 1 || month > 12) {
+            day = 'nhap lai thang';
+        } else {
+
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 12:
+                case 10:
+                    day = '30 ngay';
+                    break;
+                case 2:
+                    day = '28 ngay';
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    day = '31 ngay';
+                    break;
+            }
+            day = 'thang' + '' + 'co' + day;
+            document.getElementById('day').innerHTML = day;
+        }
+</script>
+</body>
+</html>
